@@ -1,0 +1,167 @@
+.columnDesign-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  .main-board {
+    height: 100%;
+    width: auto;
+    margin: 0 350px 0 0;
+    padding: 20px 10px 10px;
+    overflow: auto;
+    overflow-x: hidden;
+    background: #fff;
+    border-radius: 4px;
+
+    .cap {
+      margin-bottom: 20px;
+    }
+
+    .noSearch {
+      text-align: center;
+      color: #666;
+      padding: 5px;
+    }
+  }
+
+  .right-board {
+    width: 340px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    padding-top: 3px;
+    margin-left: 10px;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+
+    .field-box {
+      position: relative;
+      height: calc(100% - 42px);
+      overflow: auto;
+      overflow-x: hidden;
+      padding: 10px;
+    }
+
+    >>>.top-tabs {
+      .el-tabs__header {
+        margin-bottom: 0 !important;
+      }
+
+      .el-tabs__nav {
+        width: 100%;
+      }
+
+      .el-tabs__item {
+        width: 33%;
+        text-align: center;
+      }
+
+      &.top-tabs_app {
+        .el-tabs__item {
+          width: 25%;
+        }
+      }
+    }
+  }
+
+  .setting-box {
+    >>>.el-select {
+      width: 100%;
+    }
+
+    .btnsList {
+      box-sizing: border-box;
+      width: 100%;
+
+      >>>.el-checkbox.is-bordered+.el-checkbox.is-bordered {
+        margin: 0 10px 5px;
+      }
+
+      >>>.el-checkbox {
+        width: 136px;
+        margin: 0 10px;
+        display: inline-block;
+        box-sizing: border-box;
+
+        .el-input {
+          width: 80%;
+
+          .el-input__inner {
+            border: none;
+            height: 20px;
+            line-height: 20px;
+            padding: 0;
+            // width: 80%;
+            background: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  .typeList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .item {
+      width: 150px;
+      margin-bottom: 15px;
+
+      .item-img {
+        width: 150px;
+        height: 100px;
+        background: #EBEEF5;
+        border-radius: 4px;
+        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+        border: 1px solid #EBEEF5;
+
+        img {
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+        }
+
+        &.checked {
+          border: 1px solid #409eff;
+        }
+
+        .icon-checked {
+          display: block;
+          width: 12px;
+          height: 12px;
+          border: 12px solid #409eff;
+          border-left: 12px solid transparent;
+          border-top: 12px solid transparent;
+          border-bottom-right-radius: 4px;
+          position: absolute;
+          right: -1px;
+          bottom: -1px;
+
+          i {
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            font-size: 12px;
+            color: #fff;
+          }
+        }
+      }
+
+      .item-name {
+        font-size: 12px;
+        color: #707070;
+        margin-top: 10px;
+        text-align: center;
+      }
+    }
+  }
+
+  .typeLine {
+    margin-top: 10px !important;
+  }
+}

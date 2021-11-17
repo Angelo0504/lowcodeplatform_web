@@ -1,0 +1,534 @@
+// theme color
+$purple: #722ED1;
+$purpleSub: #C34AFF;
+$azure: #211BCE;
+$azureSub: #4D89F1;
+$blackblue:#211BCE;
+$blackblueSub:#4D89F1;
+$blue:#1890ff;
+$blueSub:#3FB9F8;
+$ocean:#13C2C2;
+$oceanSub:#69D5E6;
+$green: #3EAC12;
+$greenSub: #5BDECC;
+$yellow: #F8BC18;
+$yellowSub: #FF9C1C;
+$orange: #F5811C;
+$orangeSub: #FEB814;
+$red: #F5222D;
+$redSub: #FF5D65;
+
+@mixin mixinNavbar($color, $subColor) {
+
+  &.classic,
+  &.plain {
+    .navbar.lightWhite {
+      background-image: linear-gradient(to right, $color, $subColor);
+    }
+
+    .lightWhite {
+      .navbar-platform {
+        color: #fff;
+      }
+
+      .sidebar-logo-container {
+        background: $color !important;
+      }
+    }
+
+
+  }
+}
+
+@mixin mixinCommon($color, $subColor) {
+  .tags-view-container .tags-view-wrapper .tags-view-item {
+    &.active {
+      color: $color;
+    }
+
+    &:hover {
+      color: $color;
+    }
+  }
+
+  .JNPF-Portal .el-main .layout-area .vue-grid-item {
+    &.active-item {
+      border: 1px solid $color;
+    }
+
+    &.vue-grid-placeholder {
+      background: $color;
+    }
+
+    .drawing-item-copy {
+      border-color: $color;
+      color: $color;
+
+      &:hover {
+        background: $color;
+        color: #fff;
+      }
+    }
+  }
+
+  .drawing-board {
+    .drawing-row-item.active-from-item {
+      border: 1px solid $color;
+    }
+
+    .active-from-item>.component-name {
+      color: $color;
+    }
+
+    .active-from-item>.el-form-item {
+      border: 1px solid $color;
+    }
+
+    .drawing-item>.drawing-item-copy,
+    .drawing-row-item>.drawing-item-copy {
+      border-color: $color;
+      color: $color;
+
+      &:hover {
+        background: $color;
+        color: #fff;
+      }
+    }
+
+    .sortable-ghost::before {
+      background: $color;
+    }
+  }
+
+  .left-board {
+    .logo {
+      color: $color;
+    }
+  }
+
+  .components-body:hover {
+    border: 1px dashed $color;
+    color: $color;
+
+    i {
+      color: $color;
+    }
+  }
+
+  .board .main .item .item-list .item-list-item.active i {
+    color: $color;
+  }
+
+  .navbar .top-menu .el-menu {
+    .el-submenu {
+      &:hover {
+        .el-submenu__title {
+          color: $color;
+
+          i {
+            color: $color;
+          }
+        }
+      }
+
+      &.is-active {
+        .el-submenu__title {
+          color: $color;
+
+          i {
+            color: $color;
+          }
+        }
+      }
+    }
+
+    .el-menu-item,
+    .el-submenu__title {
+
+      &.is-active {
+        color: $color;
+
+        i {
+          color: $color;
+        }
+      }
+
+      &:hover {
+        color: $color;
+
+        i {
+          color: $color;
+        }
+      }
+    }
+  }
+
+  .setting.drawer-container .nav_items li .imgItems .icon-checked {
+    border-color: $color;
+    border-left: 10px solid transparent;
+    border-top: 10px solid transparent;
+  }
+
+  .icons-container .icon-item:hover {
+    border-color: $color;
+  }
+
+  .columnDesign-container .typeList .item .item-img {
+    &.checked {
+      border: 1px solid $color;
+    }
+
+    .icon-checked {
+      border: 12px solid $color;
+      border-left: 12px solid transparent;
+      border-top: 12px solid transparent;
+    }
+  }
+
+  .user-form .avatar-uploader .el-upload:hover {
+    border-color: $color;
+  }
+}
+
+.ligthNavbar {
+
+  &.classic,
+  &.plain {
+    .navbar.lightWhite {
+
+      .right-menu {
+        .right-menu-item {
+          color: #fff !important;
+        }
+      }
+
+      .hamburger-container .icon-ym {
+        color: #fff;
+      }
+    }
+  }
+}
+
+@mixin mixinPopup($color) {
+
+  &.classic.el-menu--vertical,
+  &.plain.el-menu--vertical {
+
+    .el-submenu__title,
+    .el-menu-item {
+      &:hover {
+        color: $color;
+
+        i {
+          color: $color;
+        }
+      }
+
+      &.is-active {
+        color: #fff;
+        background-color: $color;
+
+        i {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &.functional.el-menu--horizontal {
+    .el-menu .nest-menu {
+      .el-submenu {
+        &.is-active {
+          .el-submenu__title {
+            color: $color;
+
+            i {
+              color: $color;
+            }
+          }
+        }
+      }
+
+      .el-menu-item,
+      .el-submenu__title {
+
+        &:hover {
+          color: $color;
+
+          i {
+            color: $color;
+          }
+        }
+
+        &.is-active {
+          color: $color;
+
+          i {
+            color: $color !important;
+          }
+        }
+      }
+    }
+  }
+
+  &.JNPF-select-tree {
+    .el-tree.single .is-current>.el-tree-node__content .custom-tree-node {
+      color: $color;
+    }
+  }
+}
+
+@mixin mixinSidebar($color) {
+
+  &.classic,
+  &.plain {
+    .el-menu {
+
+      .el-submenu__title,
+      .el-menu-item {
+
+        &:hover {
+          color: $color;
+
+          i {
+            color: $color;
+          }
+        }
+
+        &.is-active {
+          background-color: $color;
+
+          &:hover {
+            color: #fff;
+            background-color: $color;
+
+            i {
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      .nest-menu .el-submenu>.el-submenu__title,
+      .el-menu-item {
+        &:hover {
+          color: $color;
+        }
+      }
+    }
+
+    .lightWhite {
+      .el-menu {
+
+        .el-submenu__title,
+        .el-menu-item {
+
+          &.is-active {
+            background-color: $color !important;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.navbar {
+  background: #fff;
+}
+
+#app .lightWhite {
+  background-color: #fff !important;
+
+  .sidebar-logo-container {
+    background: #fff !important;
+    border-bottom: 1px solid #dcdfe6 !important;
+  }
+
+  &.sidebar-container {
+    .el-menu {
+      background: #fff;
+
+      .el-submenu__title,
+      .el-menu-item {
+        color: #333;
+
+        i {
+          color: #666;
+        }
+      }
+    }
+  }
+
+  & .nest-menu .el-submenu>.el-submenu__title,
+  & .el-submenu .el-menu-item {
+    background-color: #fff !important;
+    color: #333;
+
+    &:hover {
+      color: #1890ff;
+      background-color: transparent;
+
+      i {
+        color: #1890ff;
+      }
+    }
+
+    &.is-active {
+      background-color: #1890ff !important;
+    }
+  }
+}
+
+.lightWhite.classic.el-menu--vertical,
+.lightWhite.plain.el-menu--vertical {
+  &>.el-menu--popup {
+    background: #fff;
+  }
+
+  .el-submenu__title,
+  .el-menu-item {
+    color: #333;
+
+    i {
+      color: #666
+    }
+
+    &:hover {
+      color: #1890ff;
+
+      i {
+        color: #1890ff;
+      }
+    }
+
+    &.is-active {
+      color: #fff;
+
+      i {
+        color: #fff;
+      }
+    }
+  }
+}
+
+// 玫紫
+#app .purple {
+  @include mixinNavbar($purple, $purpleSub);
+  @include mixinCommon($purple, $purpleSub);
+  @include mixinSidebar($purple);
+  @extend .ligthNavbar;
+}
+
+.purple {
+  @include mixinPopup($purple);
+}
+
+// 湛蓝
+#app .azure {
+  @include mixinNavbar($azure, $azureSub);
+  @include mixinCommon($azure, $azureSub);
+  @include mixinSidebar($azure);
+  @extend .ligthNavbar;
+}
+
+.azure {
+  @include mixinPopup($azure);
+}
+
+// 深蓝
+#app .blackblue {
+  @include mixinNavbar($blackblue, $blackblueSub);
+  @include mixinCommon($blackblue, $blackblueSub);
+  @include mixinSidebar($blackblue);
+  @extend .ligthNavbar;
+}
+
+.blackblue {
+  @include mixinPopup($blackblue);
+}
+
+// 经典蓝
+#app .blue {
+  @include mixinNavbar($blue, $blueSub);
+  @include mixinCommon($blue, $blueSub);
+  @include mixinSidebar($blue);
+  @extend .ligthNavbar;
+}
+
+.blue {
+  @include mixinPopup($blue);
+}
+
+// 海洋
+#app .ocean {
+  @include mixinNavbar($ocean, $oceanSub);
+  @include mixinCommon($ocean, $oceanSub);
+  @include mixinSidebar($ocean);
+  @extend .ligthNavbar;
+}
+
+.ocean {
+  @include mixinPopup($ocean);
+}
+
+// 绿色
+#app .green {
+  @include mixinNavbar($green, $greenSub);
+  @include mixinCommon($green, $greenSub);
+  @include mixinSidebar($green);
+  @extend .ligthNavbar;
+}
+
+.green {
+  @include mixinPopup($green);
+}
+
+// 丰收
+#app .yellow {
+  @include mixinNavbar($yellow, $yellowSub);
+  @include mixinCommon($yellow, $yellowSub);
+  @include mixinSidebar($yellow);
+  @extend .ligthNavbar;
+}
+
+.yellow {
+  @include mixinPopup($yellow);
+}
+
+// 橘黄
+#app .orange {
+  @include mixinNavbar($orange, $orangeSub);
+  @include mixinCommon($orange, $orangeSub);
+  @include mixinSidebar($orange);
+  @extend .ligthNavbar;
+}
+
+.orange {
+  @include mixinPopup($orange);
+}
+
+// 红色
+#app .red {
+  @include mixinNavbar($red, $redSub);
+  @include mixinCommon($red, $redSub);
+  @include mixinSidebar($red);
+  @extend .ligthNavbar;
+}
+
+.red {
+  @include mixinPopup($red);
+}
+
+:export {
+  purpleTheme: $purple;
+  azureTheme: $azure;
+  blackblueTheme: $blackblue;
+  blueTheme: $blue;
+  oceanTheme: $ocean;
+  greenTheme: $green;
+  yellowTheme: $yellow;
+  orangeTheme: $orange;
+  redTheme: $red;
+  defaultTheme: #409EFF;
+}
